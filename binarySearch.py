@@ -30,7 +30,7 @@ def binarySearch(nums, target):
 # no loops
 
 
-# @time_it
+@time_it
 def binarySearch_recursive(nums, target, left_index, right_index):
     if right_index < left_index:
         return -1
@@ -72,4 +72,4 @@ if __name__ == "__main__":
     nums = [1, 2, 3, 4, 5, 6, 7, 11, 11, 17, 19, 23, 55]
     print(binarySearch(nums, 11))
     print(binarySearch_recursive(nums, 11, 0, len(nums)))
-    print(find_all_occurances(nums, 11))
+    # print(find_all_occurances(nums, 11))
