@@ -47,6 +47,8 @@ class Solution(object):
             # update carry
             carry = (v1+v2+carry)//10
 
+            # carry, sum = divmod(val1+val2 + carry, 10)
+
             # create new node
             new_node = ListNode(sum)
             current_node.next = new_node
