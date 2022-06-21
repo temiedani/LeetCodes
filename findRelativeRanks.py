@@ -49,7 +49,6 @@ def findRelativeRanks(score):
 def findRelativeRanks_2(score):
     indicies = {v: idx for idx, v in enumerate(score)}
     result = [0 for _ in score]
-    print(result)
     ranks = {0: 'Gold Medal', 1: 'Silver Medal', 2: 'Bronze Medal'}
 
     for i, v in enumerate(sorted(score)[::-1]):
@@ -61,9 +60,10 @@ def findRelativeRanks_2(score):
 
 if __name__ == '__main__':
 
-    score = [5, 4, 3, 2, 1, 77]
-    indicies = {v: idx for idx, v in enumerate(score)}
-    print(indicies)
+    score = [5, 4, 3, 11, 2, 1, 77]
+    indicies = {idx: val for idx, val in enumerate(score)}
+    # Sorting a Dictionary
+    # print(sorted(indicies, key=lambda x: indicies[x], reverse=True))
 
     print(findRelativeRanks(score))
     findRelativeRanks_2(score)
