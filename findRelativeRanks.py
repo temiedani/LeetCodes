@@ -18,6 +18,8 @@ Return an array answer of size n where answer[i] is the rank of the ith athlete.
 '''
 import heapq
 
+# Solution1: Using max Heap
+
 
 def findRelativeRanks(score):
     res = {}
@@ -41,8 +43,27 @@ def findRelativeRanks(score):
     output = sorted(res, key=lambda x: res[x])
     return output
 
+# Solution 2: Using list indices
+
+
+def findRelativeRanks_2(score):
+    indicies = {v: idx for idx, v in enumerate(score)}
+    result = [0 for _ in score]
+    print(result)
+    ranks = {0: 'Gold Medal', 1: 'Silver Medal', 2: 'Bronze Medal'}
+
+    for i, v in enumerate(sorted(score)[::-1]):
+        index = indicies[v]
+        result[index] = ranks[i] if i in range(3) else str(i + 1)
+
+    return print(result)
+
 
 if __name__ == '__main__':
 
     score = [5, 4, 3, 2, 1, 77]
+    indicies = {v: idx for idx, v in enumerate(score)}
+    print(indicies)
+
     print(findRelativeRanks(score))
+    findRelativeRanks_2(score)
