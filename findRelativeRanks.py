@@ -39,7 +39,9 @@ def findRelativeRanks(score):
             res[str(rank)] = score.index(-s)
         rank += 1
 
-    # sort by index
+    sorted_dict = dict(sorted(res.items(), key=lambda kv: kv[1]))
+    return [x for x in sorted_dict.keys()]
+
     output = sorted(res, key=lambda x: res[x])
     return output
 
@@ -60,10 +62,10 @@ def findRelativeRanks_2(score):
 
 if __name__ == '__main__':
 
-    score = [5, 4, 3, 11, 2, 1, 77]
+    score = [5, 4, 3, 2, 1]
     indicies = {idx: val for idx, val in enumerate(score)}
     # Sorting a Dictionary
     # print(sorted(indicies, key=lambda x: indicies[x], reverse=True))
 
     print(findRelativeRanks(score))
-    findRelativeRanks_2(score)
+    # findRelativeRanks_2(score)
