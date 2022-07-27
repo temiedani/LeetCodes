@@ -51,19 +51,18 @@ def multiply(x: int, y: int) -> int:
 # zip
 fruit_dictionary = dict(zip(fruits, prices))
 
-print(fruit_dictionary)
+print("fruit_dictionary", fruit_dictionary)
 
 # list comprehension
 even = [x for x in range(20) if x % 2 == 0]
 print(even)
 
 #print(list(range(0, 20, 2)))
-s
-# filter
+# map
 sq = list(map(squares, [1, 2, 3, 4, 5]))
 print(sq)
 
-# map
+# filter()
 ev = list(filter(evens, [1, 2, 3, 4, 5]))
 print(ev)
 
@@ -72,7 +71,7 @@ product = reduce(multiply, [1, 2, 3, 4, 5])
 print(product)
 
 # lampda
-print(list(map(lambda x: x**2, [1, 2, 3, 4, 5])))
+print("lampda",list(map(lambda x: x**2, [1, 2, 3, 4, 5])))
 
 # all and any
 

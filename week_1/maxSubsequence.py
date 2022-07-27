@@ -20,7 +20,4 @@ def maxSubsequence(nums, k):
     return print(current_sum)
 
 
-maxSubsequence([7, 1, 2, -1, 3, 4, 10, -12, 3, 21, -19])
-
-
-@1Hiwetey
+maxSubsequence([7, 1, 2, -1, 3, 4, 10, -12, 3, 21, -19],2)
